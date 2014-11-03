@@ -5,9 +5,9 @@ CREATE TABLE IF NOT EXISTS `cities` (
   `state_id` int(10) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `state_id` (`state_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=92 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=92 ;
 
-INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+INSERT INTO `cities` (`id`, `city_name`, `state_id`) VALUES
 (1, 'Berlin', 18),
 (2, 'Hamburg', 21),
 (5, 'Frankfurt am Main', 22),
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `continents` (
   `continent_name` varchar(13) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 INSERT INTO `continents` (`id`, `continent_code`, `continent_name`) VALUES
 (1, 'EU', 'Europe'),
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `countries` (
   `continent_id` int(2) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `continent_id` (`continent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=243 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=243 ;
 
 INSERT INTO `countries` (`id`, `country_code`, `country_name`, `continent_id`) VALUES
 (1, 'US', 'United States', 3),
@@ -355,9 +355,9 @@ CREATE TABLE IF NOT EXISTS `states` (
   `country_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `country_id` (`country_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
-INSERT INTO `states` (`id`, `name`, `country_id`) VALUES
+INSERT INTO `states` (`id`, `state_name`, `country_id`) VALUES
 (1, 'Baden-Württemberg', 81),
 (2, 'Bayern', 81),
 (18, 'Berlin', 81),
